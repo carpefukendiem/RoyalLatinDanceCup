@@ -1,0 +1,629 @@
+body {
+  background-image: url('../images/Artboard 1@2x.webp'); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  * {
+    font-family: 'Exo 2', san-serif;
+  }
+    h1 {
+      color: gold;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 5em;
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    p,
+    li {
+      font-size: 18px;
+    }
+
+    a {
+      text-decorationL: none;
+    }
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px; /* Adjust padding for better spacing */
+  box-sizing: border-box; /* Include padding and border in the element's width and height */
+  transition: background-color 0.5s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.header-scrolled {
+  background-color: rgb(9,25,42);
+}
+
+.header-scrolled nav ul li a {
+  color: #fff;
+}
+
+.header-logo {
+  width: 100px;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: gold; /* Set the color to gold instead of inheriting white */
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+  transition: color 0.3s ease; /* Optional: smooth transition for color change */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-item > a {
+  display: block;
+  padding: 10px;
+  color: gold;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(9, 19, 46, 0.95);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.has-dropdown:hover > .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  color: gold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.cta-button a {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+  margin-left: 2px;
+}
+
+.cta-button a:hover {
+  background-color: #45a049;
+  color: gold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 40px 0 0 70px;
+}
+
+.main {
+  display:flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically if needed */
+  width: 100%; /* Take full width of its container */
+  margin: 0 auto;
+}
+
+/* Styles that apply globally */
+.hamburger-menu {
+  display: none; /* Hides the hamburger menu by default */
+  text-align: right;
+  padding-right: 20px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 30px; /* Size of the hamburger icon */
+  cursor: pointer;
+  color: #ccc;
+}
+
+.menu-content {
+  display: none; /* Ensures menu content is hidden when not toggled */
+  position: absolute;
+  background-color: #f9f9f9;
+  top: 40px; /* Positioned below the hamburger button */
+  right: 20px;
+  border: 1px solid #eee;
+  width: 200px; /* Width can be adjusted as needed */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-content a:hover {
+  background-color: #f7f7f7;
+}
+
+.bg-img {
+  background-image: url('images/Artboard@4x.webp'); /* Path to your image file */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Optional: Image stays fixed during scrolling */
+}
+
+@keyframes moveLogo {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(10px, 10px); }
+}
+      
+.hero-header {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Full width of the viewport */
+  max-width: 960px; /* Maximum width to constrain the hero section */
+  margin-top: 0; /* Reduce or remove the top margin of the hero section */
+  padding-top: 20px 0 0 0; /* Reduce or remove the top padding of the hero section */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 30px; /* Hero section uses full width of its container */
+}
+
+/* Styling specific to the images in the hero section */
+.hero img {
+  width: 100%; /* Each image fills the width of the hero container */
+  margin-top: 0; /* Adds vertical space between images */
+  
+}
+
+.small-img {
+  flex: 1; /* Smaller images get less space */
+}
+
+.large-img {
+  flex: 2;
+  max-width: 67%;
+  margin: 0;
+  padding-top: 0;
+  transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
+  animation: moveLogo 2s infinite alternate;
+}
+
+.slogan {
+  font-size: 4.25em;
+  font-weight: 250;
+}
+.dates {
+  color: gold;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 200;
+  font-size: 2.8em;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 0 0 0 10px; /* Adjust space between the h1 and h2 tags */
+}
+
+.dates span {
+  font-weight: bold;
+}
+
+
+  section {
+    padding: 20px 10px; /* Smaller padding for mobile */
+    margin-bottom: 20px; /* Smaller margin for mobile */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Smaller font size for headings on mobile */
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  .judges {
+    grid-template-columns: repeat(2, 1fr); /* 2-column layout for tablets and large phones */
+  }
+
+
+  body, h1, h2, p {
+    text-align: center; /* Center text */
+    font-size: 14px; /* Make fonts smaller */
+    padding: 0 10px; /* Add padding */
+  }
+
+  .hero, .hero-header, .main {
+    padding: 10px; /* Adjust padding for sections */
+  }
+  
+  .judges {
+    grid-template-columns: repeat(2, 1fr); /* 2-column layout for tablets and large phones */
+  }
+
+
+  .comp-details h3 {
+      font-size: 1.8rem; /* Smaller font size on mobile */
+      padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .header-logo {
+    width: 60px;
+  }
+
+  nav.navbar {
+    display: none;
+  }
+
+  .judges {
+    grid-template-columns: 1fr; /* Single column layout for small phones */
+  }
+}
+
+
+/* Judges Grid Area */
+.judges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+  gap: 25px; /* Sets the gap between grid items */
+}
+
+.judges img {
+  width: 100%; /* Makes images responsive */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 400px; /* Maximum size of the images */
+  display: block; /* Ensures max-width is respected */
+  margin: 0 auto; /* Centers images in their grid cell */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.judges img:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+.judges-title {
+  
+  
+  text-align: center; /* Center-align the title */
+  color: gold; /* Gold color to match the theme */
+  font-size: 4.5rem; /* Large font size for prominence */
+  letter-spacing: 0.1em; /* Spacing out letters for a grand effect */
+  text-transform: uppercase; /* Uppercase text for a formal appearance */
+  font-weight: 400; /* Bold font weight for legibility */
+  margin: 1rem 0; /* Space above and below the heading */
+  padding: 1rem 0; /* Padding above and below the heading */
+  
+  
+  /* Adding a gradient text effect */
+  background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Adding a subtle text-shadow for depth */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  
+  /* Adding an animation to create a shimmer effect */
+  animation: shimmer 2s infinite;
+  background-size: 200% auto;
+}
+
+section {
+  padding: 40px 20px; /* Adds padding inside each section */
+  margin-bottom: 40px; /* Adds space below each section */
+}
+
+
+.menu-content a {
+  display: block; /* Stack links vertically */
+  text-decoration: none;
+  color: #000; /* Adjust color as needed */
+  padding: 10px; /* Add padding for touch targets */
+}
+
+.details-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.left-details {
+ flex:1;
+ padding: 20px;   
+}
+
+.comp-details {
+  flex: 1;
+  padding: 20px;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+}
+
+h1,h2,h3,p button {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Map Section */
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 500px; /* Adjust based on your preference */
+}
+
+.hotel-info {
+  width: 30%;
+  padding: 20px;
+  background-color: white;
+  color: black;
+}
+
+
+.whatsapp-button {
+  background-color: #25D366; /* WhatsApp color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #22c35e; /* Slightly darker green */
+}
+
+
+
+/* competition and passes heading */
+.comp-details {
+  text-align: center; /* Aligns the content to the center */
+  margin: 0; /* Resets any default margin */
+  padding: 0; /* Resets any default padding */
+}
+
+.comp-details h3 {
+  color: gold; /* Gold color to match the theme */
+  font-size: 3.5rem; /* Large font size for prominence */
+  letter-spacing: 0.1em; /* Spacing out letters for a grand effect */
+  text-transform: uppercase; /* Uppercase text for a formal appearance */
+  font-weight: 700; /* Bold font weight for legibility */
+  margin: 1rem 0; /* Space above and below the heading */
+  padding: 1rem 0; /* Padding above and below the heading */
+  
+  
+  /* Adding a gradient text effect */
+  background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Adding a subtle text-shadow for depth */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  
+  /* Adding an animation to create a shimmer effect */
+  animation: shimmer 2s infinite;
+  background-size: 200% auto;
+}
+
+
+
+/* Shimmer effect animation */
+@keyframes shimmer {
+  to {
+      background-position: 200% center;
+  }
+}
+
+.site-footer {
+  background-color: rgb(9,25,42); /* Dark background for the footer */
+  color: #fff; /* White text color */
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  width: 400px; /* Consistent with the header logo */
+  padding: 10px 0;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-item {
+  margin: 0 10px;
+}
+
+.footer-item a {
+  color: gold;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.footer-item a:hover {
+  color: goldenrod; /* Highlight on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444; /* Subtle line to separate the content */
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .slogan {
+    padding-top: 1em;
+    font-size: 30px;
+    font-weight: 200;
+  }
+   
+  .dates {
+    padding-top: 1em;
+    font-size: 2.5em;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-item {
+      margin: 5px 0; /* Stack items vertically with space */
+  }
+
+  .hamburger-menu {
+    display: block; /* Shows the hamburger menu on mobile devices */
+    position: fixed;
+    top: 0; /* Aligns the menu at the top of the viewport */
+    right: 0; /* Aligns the menu to the right side of the viewport */
+    width: 100%; /* Ensures the menu stretches across the full width */
+    background-color: transparent; /* Adds a background color for visibility */
+    z-index: 1000; /* Ensures the menu stays on top of other content */
+    
+  }
+
+
+  nav.navbar {
+    display: none;
+  }
+
+  .header-logo {
+    width: 70px;
+  }
+
+}
+
+section#shadow-host-companion {
+  padding: 0;
+  margin: 0 auto;
+}
