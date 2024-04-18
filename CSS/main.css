@@ -4,15 +4,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  * {
-    font-family: 'Exo 2', san-serif;
-  }
+  
     h1 {
       color: gold;
       font-family: 'Exo 2', sans-serif;
-      font-size: 5em;
       letter-spacing: 5px;
       margin-bottom: 15px;
+      text-align: center;
     }
 
     h2 {
@@ -70,8 +68,10 @@ nav ul li a {
 }
 
 .header-logo {
-  width: 100px;
-  padding: 20px;
+    width: 100px;
+    padding: 20px;
+    margin-top: 1em;
+    margin-left: 7em;
 }
 
 .navbar {
@@ -124,6 +124,9 @@ nav ul li a {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .has-dropdown:hover > .dropdown {
@@ -161,7 +164,7 @@ nav ul li a {
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
   z-index: 1000;
-  padding: 40px 0 0 70px;
+  padding: 10px;
 }
 
 .main {
@@ -191,7 +194,7 @@ nav ul li a {
 .menu-content {
   display: none; /* Ensures menu content is hidden when not toggled */
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgb(9,25,42);
   top: 40px; /* Positioned below the hamburger button */
   right: 20px;
   border: 1px solid #eee;
@@ -239,13 +242,12 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  padding-top: 30px; /* Hero section uses full width of its container */
 }
 
 /* Styling specific to the images in the hero section */
 .hero img {
   width: 100%; /* Each image fills the width of the hero container */
-  margin-top: 0; /* Adds vertical space between images */
+  margin-top: -5em; /* Adds vertical space between images */
   
 }
 
@@ -257,14 +259,15 @@ nav ul li a {
   flex: 2;
   max-width: 67%;
   margin: 0;
-  padding-top: 0;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
 }
 
 .slogan {
-  font-size: 4.25em;
+  font-size: 2.25em;
   font-weight: 250;
+  margin-top: 6em;
+  font-color: #D1A940;
 }
 .dates {
   color: gold;
@@ -273,7 +276,7 @@ nav ul li a {
   font-size: 2.8em;
   letter-spacing: 5px;
   text-align: center;
-  margin: 0 0 0 10px; /* Adjust space between the h1 and h2 tags */
+  text-transform: uppercase;
 }
 
 .dates span {
@@ -298,12 +301,6 @@ nav ul li a {
     grid-template-columns: repeat(2, 1fr); /* 2-column layout for tablets and large phones */
   }
 
-
-  body, h1, h2, p {
-    text-align: center; /* Center text */
-    font-size: 14px; /* Make fonts smaller */
-    padding: 0 10px; /* Add padding */
-  }
 
   .hero, .hero-header, .main {
     padding: 10px; /* Adjust padding for sections */
@@ -358,9 +355,7 @@ nav ul li a {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
 }
 
-.judges-title {
-  
-  
+.judges-title { 
   text-align: center; /* Center-align the title */
   color: gold; /* Gold color to match the theme */
   font-size: 4.5rem; /* Large font size for prominence */
@@ -369,16 +364,12 @@ nav ul li a {
   font-weight: 400; /* Bold font weight for legibility */
   margin: 1rem 0; /* Space above and below the heading */
   padding: 1rem 0; /* Padding above and below the heading */
-  
-  
   /* Adding a gradient text effect */
   background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
   /* Adding a subtle text-shadow for depth */
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  
   /* Adding an animation to create a shimmer effect */
   animation: shimmer 2s infinite;
   background-size: 200% auto;
@@ -393,8 +384,12 @@ section {
 .menu-content a {
   display: block; /* Stack links vertically */
   text-decoration: none;
-  color: #000; /* Adjust color as needed */
+  color: white; /* Adjust color as needed */
   padding: 10px; /* Add padding for touch targets */
+}
+
+menu-content a:hover{
+  color: black;
 }
 
 .details-section {
@@ -459,6 +454,15 @@ h1,h2,h3,p button {
   color: black;
 }
 
+.map-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(=50%, -50%);
+  color: gold;
+  font-size: 44px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
 
 .whatsapp-button {
   background-color: #25D366; /* WhatsApp color */
@@ -496,8 +500,7 @@ h1,h2,h3,p button {
   font-weight: 700; /* Bold font weight for legibility */
   margin: 1rem 0; /* Space above and below the heading */
   padding: 1rem 0; /* Padding above and below the heading */
-  
-  
+
   /* Adding a gradient text effect */
   background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
   -webkit-background-clip: text;
@@ -604,26 +607,77 @@ h1,h2,h3,p button {
   .hamburger-menu {
     display: block; /* Shows the hamburger menu on mobile devices */
     position: fixed;
-    top: 0; /* Aligns the menu at the top of the viewport */
+    /* top: 0; Aligns the menu at the top of the viewport */
     right: 0; /* Aligns the menu to the right side of the viewport */
     width: 100%; /* Ensures the menu stretches across the full width */
     background-color: transparent; /* Adds a background color for visibility */
     z-index: 1000; /* Ensures the menu stays on top of other content */
-    
   }
-
 
   nav.navbar {
     display: none;
   }
-
-  .header-logo {
-    width: 70px;
+  
+  .logo-container {
+    margin-right: auto;
+    margin-left: 20px;
   }
 
-}
+  .header-logo {
+    width: 65px;
+    margin: 0;
+  }
 
-section#shadow-host-companion {
+  .judges {
+    grid-template-columns: 1fr 1fr; /* Changes to one column */
+    gap: 1.25em; /* Optionally adjust the gap for tighter spacing */
+
+  }
+
+  section#shadow-host-companion {
   padding: 0;
   margin: 0 auto;
+  }
+
+  .judges-title { 
+    text-align: center; /* Center-align the title */
+    color: gold; /* Gold color to match the theme */
+    font-size: 3.5rem; /* Large font size for prominence */
+    letter-spacing: 0.1em; /* Spacing out letters for a grand effect */
+    text-transform: uppercase; /* Uppercase text for a formal appearance */
+    font-weight: 300; /* Bold font weight for legibility */
+    margin: 1rem 0; /* Space above and below the heading */
+    padding:0 0 .5em 0; /* Padding above and below the heading */
+    /* Adding a gradient text effect */
+    background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Adding a subtle text-shadow for depth */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adding an animation to create a shimmer effect */
+    animation: shimmer 2s infinite;
+    background-size: 200% auto;
+  }
+
+  .comp-details h3 {
+    color: gold; /* Gold color to match the theme */
+    font-size: 1.75rem; /* Large font size for prominence */
+    letter-spacing: 0.1em; /* Spacing out letters for a grand effect */
+    text-transform: uppercase; /* Uppercase text for a formal appearance */
+    font-weight: 700; /* Bold font weight for legibility */
+    margin: 1rem 0; /* Space above and below the heading */
+    padding: 1rem 0; /* Padding above and below the heading */
+  
+    /* Adding a gradient text effect */
+    background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Adding a subtle text-shadow for depth */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    /* Adding an animation to create a shimmer effect */
+    animation: shimmer 2s infinite;
+    background-size: 200% auto;
+  }
 }
