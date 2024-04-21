@@ -16,3 +16,24 @@ window.addEventListener('scroll', function() {
     }
   }
   
+  
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Function to load the Header
+    fetch("/header.html") // Adjust the path if necessary
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error('Error loading the header:', err));
+  
+    // Function to load the Footer
+    fetch("/footer.html") // Adjust the path if necessary
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error('Error loading the footer:', err));
+  });
+  
+  AOS.init();

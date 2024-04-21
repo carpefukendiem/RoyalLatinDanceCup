@@ -1,156 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Latin Dance Cup - Categories</title>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Exo 2', sans-serif;
-      background-image: url('../images/Artboard 1@2x.webp');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header {
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-      text-align: center;
-      padding: 20px;
-    }
-
-    .logo {
-      max-width: 200px; /* Adjust as needed */
-      margin-bottom: 20px;
-    }
-
-    .title {
-      font-size: 3rem; /* Adjust as needed */
-      color: #DAA520; /* Gold color */
-      text-transform: uppercase;
-      margin-bottom: 50px; /* Space below the title */
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .category {
-      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-      padding: 15px;
-      border: 1px solid #DAA520; /* Gold border */
-      text-align: center;
-    }
-
-    .category h2 {
-      color: #DAA520;
-      margin-bottom: 15px;
-    }
-
-    .category ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .category ul li {
-      margin-bottom: 10px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8); /* Footer background */
-    }
-
-    .footer p {
-      color: #DAA520; /* Gold color for text */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Latin Dance Cup - Categories</title>
+    <link rel="stylesheet" href="../CSS/categories.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/normalize.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <header id="header-placeholder"></header>
 
-<div class="header">
-  <img src="../images/plain-logo.webp" alt="Royal Latin Dance Cup Logo" class="logo">
-  <div class="title">Competition Categories - Salsa</div>
-</div>
+    <main>
+        <h1>Competition Categories</h1>
 
-<div class="categories-container">
-    <div class="category solo">
-      <h2>Solo - Categories</h2>
-      <ul>
-        <li>Kids 8-12 Boys / Girls</li>
-        <li>Junior 13-17 Boys / Girls</li>
-        <li>Over 40 Men / Women</li>
-        <li>Over 55 Men / Women</li>
-        <li>Student - Beg/Int Men / Women</li>
-        <li>Student - Int/Adv Men / Women</li>
-        <li>Amateur Men / Women</li>
-        <li>Open Men / Women</li>
-        <li>Pro Men / Women</li>
-      </ul>
-    </div>
-  
-    <div class="category couples">
-      <h2>Couples - Categories</h2>
-      <ul>
-        <li>Kids 8-12</li>
-        <li>Juniors 13-17</li>
-        <li>Student - Beg/Int</li>
-        <li>Student - Int/Adv</li>
-        <li>Amateur</li>
-        <li>Open</li>
-        <li>Pro-Am</li>
-        <li>Same Gender</li>
-      </ul>
-    </div>
-  
-    <div class="category duet">
-      <h2>Duet - Categories</h2>
-      <ul>
-        <li>Kids 9-16 Boys / Girls</li>
-        <li>Student Men / Women</li>
-        <li>Amateur Men / Women</li>
-        <li>Open Mixed</li>
-      </ul>
-    </div>
-  
-    <div class="category teams">
-      <h2>Teams - Categories</h2>
-      <ul>
-        <li>Junior 13-17</li>
-        <li>Student/Amateur</li>
-        <li>Pro-Am</li>
-        <li>College Division</li>
-      </ul>
-    </div>
-  
-    <div class="category shines-teams">
-      <h2>Shines Teams - Categories</h2>
-      <ul>
-        <li>Kids 8-12 Open</li>
-        <li>Junior 13-17 Boys / Girls</li>
-        <li>Student/Amateur Men / Women</li>
-        <li>Pro-Am Men / Women</li>
-        <li>Open Mixed</li>
-      </ul>
-    </div>
-  </div>
-  
+        <section class="categories-container">
+            <article class="category solo">
+                <h2>Solo - Categories</h2>
+                <ul>
+                    <li>Kids 8-12 Boys / Girls</li>
+                    <li>Junior 13-17 Boys / Girls</li>
+                    <li>Over 40 Men / Women</li>
+                    <li>Over 55 Men / Women</li>
+                    <li>Student - Beg/Int Men / Women</li>
+                    <li>Student - Int/Adv Men / Women</li>
+                    <li>Amateur Men / Women</li>
+                    <li>Open Men / Women</li>
+                    <li>Pro Men / Women</li>
+                </ul>
+            </article>
 
-<div class="footer">
-  <p>April 17th-20th 2025 - It's Your Time To Shine</p>
-  <p>Marriott Los Angeles Burbank Airport - 2500 N Hollywood Blvd. Burbank CA 91505</p>
-</div>
+            <article class="category couples">
+                <h2>Couples - Categories</h2>
+                <ul>
+                    <li>Kids 8-12</li>
+                    <li>Juniors 13-17</li>
+                    <li>Student - Beg/Int</li>
+                    <li>Student - Int/Adv</li>
+                    <li>Amateur</li>
+                    <li>Open</li>
+                    <li>Pro-Am</li>
+                    <li>Same Gender</li>
+                </ul>
+            </article>
 
+            <article class="category duet">
+                <h2>Duet - Categories</h2>
+                <ul>
+                    <li>Kids 9-16 Boys / Girls</li>
+                    <li>Student Men / Women</li>
+                    <li>Amateur Men / Women</li>
+                    <li>Open Mixed</li>
+                </ul>
+            </article>
+
+            <article class="category teams">
+                <h2>Teams - Categories</h2>
+                <ul>
+                    <li>Junior 13-17</li>
+                    <li>Student/Amateur</li>
+                    <li>Pro-Am</li>
+                    <li>College Division</li>
+                </ul>
+            </article>
+
+            <article class="category shines-teams">
+                <h2>Shines Teams - Categories</h2>
+                <ul>
+                    <li>Kids 8-12 Open</li>
+                    <li>Junior 13-17 Boys / Girls</li>
+                    <li>Student/Amateur Men / Women</li>
+                    <li>Pro-Am Men / Women</li>
+                    <li>Open Mixed</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Latin Dance Cup - It's Your Time To Shine</title>
+  <title>Event Details - Royal Latin Dance Cup</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -18,25 +18,25 @@
 <body>
   <header id="header">
     <div class="logo-container">
-      <a href="#" class="logo">
-      <img src="../images/header-logo.webp" class="header-logo" alt="Royal Latin Dance Cup - Salsa Dance Event">
+      <a href="/index.html" class="logo">
+      <img src="../images/header-logo.webp" data-aos="flip-left" class="header-logo" alt="Royal Latin Dance Cup - Salsa Dance Event">
       </a>
     </div>
-    <nav class="navbar">
+    <nav class="navbar" data-aos="fade-down">
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="#">Home</a>
+          <a href="/index.html">Home</a>
         </li>
         <li class="nav-item has-dropdown">
-          <a href="#">Event Details</a>
+          <a href="/event-details/index.html">Event Details</a>
           <ul class="dropdown">
-            <li><a href="#">Judges</a></li>
-            <li><a href="#">Rules</a></li>
-            <li><a href="#">Categories</a></li>
+            <li><a href="/event-details/judges.html">Judges</a></li>
+            <li><a href="/event-details/rules.html">Rules</a></li>
+            <li><a href="/event-details/competition-categories.html">Categories</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="#">About Us</a>
+          <a href="#">Hotel & Travel</a>
         </li>
         <li class="nav-item">
           <a href="#">Contact</a>
@@ -52,8 +52,8 @@
       </button>
       <div class="menu-content" id="menuContent" style="display: none;">
         <!-- Navigation links go here -->
-        <a href="#">Home</a>
-        <a href="#">Event Details</a>
+        <a href="/index.html">Home</a>
+        <a href="/event-details/index.html">Event Details</a>
         <a href="#">Hotel & Travel</a>
         <a href="#">Contact</a>
       </div>
@@ -93,27 +93,12 @@
       <!-- map code snippet goes here -->
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="footer-content">
-        <a href="#" class="logo">
-            <img src="images/Artboard.webp" alt="It's your time to shine!" class="footer-logo">
-        </a>
-        <nav class="footer-nav">
-            <ul class="footer-menu">
-                <li class="footer-item"><a href="#">Home</a></li>
-                <li class="footer-item"><a href="#">Event Details</a></li>
-                <li class="footer-item"><a href="#">About Us</a></li>
-                <li class="footer-item"><a href="#">Contact</a></li>
-                <li class="footer-item"><a href="#tickets">Buy Tickets</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Royal Latin Dance Cup. All rights reserved.</p>
-    </div>
-</footer>
+  <div id="footer-placeholder"></div>
 
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

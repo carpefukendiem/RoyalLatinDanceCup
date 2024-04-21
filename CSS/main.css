@@ -1,21 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+  --primary-font: 'Exo 2', sans-serif;
+  --background-dark-blue: #012a4a;
+  --background-light-blue: #013a63;
+  --gold-color: #d4af37;
+  --light-blue: #2a9d8f;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url('../images/Artboard 1@2x.webp'); /* Replace with the path to your background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: var(--primary-font);
+  flex-direction: column;
+  align-items: center;
   
     h1 {
-      color: gold;
-      font-family: 'Exo 2', sans-serif;
       letter-spacing: 5px;
       margin-bottom: 15px;
-      text-align: center;
     }
 
     h2 {
       font-size: 24px;
       margin-bottom: 15px;
+    }
+
+    h1,h2 {
+      color: gold;
+      text-align: center;
     }
 
     p,
@@ -39,6 +62,7 @@ body {
   padding: 0 20px; /* Adjust padding for better spacing */
   box-sizing: border-box; /* Include padding and border in the element's width and height */
   transition: background-color 0.5s ease;
+  z-index: 10;
 }
 
 nav ul {
@@ -50,7 +74,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0px;
 }
 
 nav ul li a {
@@ -111,6 +135,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+.nav-item > a, .navbar a {
+  transition: color 0.3s ease;
+}
+
 
 .dropdown {
   list-style-type: none;
@@ -139,6 +167,25 @@ nav ul li a {
   text-decoration: none;
   display: block;
   text-align: left;
+}
+
+
+/* Navbar links hover effect */
+.nav-item > a:hover,
+.navbar a:hover {
+  color: goldenrod; /* Change text color on hover */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  background-color: rgb(9,25,42); /* Set the dropdown background color */
+  /* ... existing styles ... */
+}
+
+/* Dropdown menu hover effect */
+.dropdown a:hover {
+  color: goldenrod; /* Change text color on hover */
+  background-color: rgba(255,215,0,0.2); /* Optional: Slight background highlight */
 }
 
 .cta-button a {
@@ -174,6 +221,10 @@ nav ul li a {
   justify-content: center; /* Center children vertically if needed */
   width: 100%; /* Take full width of its container */
   margin: 0 auto;
+}
+
+.main.hotel-travel {
+  padding-top: 220px;
 }
 
 /* Styles that apply globally */
@@ -235,7 +286,7 @@ nav ul li a {
   max-width: 960px; /* Maximum width to constrain the hero section */
   margin-top: 0; /* Reduce or remove the top margin of the hero section */
   padding-top: 20px 0 0 0; /* Reduce or remove the top padding of the hero section */
-}
+  z-index: 1;
 
 .hero {
   display: flex;
@@ -247,8 +298,14 @@ nav ul li a {
 /* Styling specific to the images in the hero section */
 .hero img {
   width: 100%; /* Each image fills the width of the hero container */
-  margin-top: -5em; /* Adds vertical space between images */
-  
+
+
+}
+
+.hero-img {
+  margin-top: 5em;
+  transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
+  animation: moveLogo 2s infinite alternate;
 }
 
 .small-img {
@@ -259,15 +316,14 @@ nav ul li a {
   flex: 2;
   max-width: 67%;
   margin: 0;
+  padding-top: 5.75em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
 }
 
 .slogan {
-  font-size: 2.25em;
+  font-size: 4.25em;
   font-weight: 250;
-  margin-top: 6em;
-  font-color: #D1A940;
 }
 .dates {
   color: gold;
@@ -276,7 +332,7 @@ nav ul li a {
   font-size: 2.8em;
   letter-spacing: 5px;
   text-align: center;
-  text-transform: uppercase;
+  margin: 0 0 0 10px; /* Adjust space between the h1 and h2 tags */
 }
 
 .dates span {
@@ -680,4 +736,130 @@ h1,h2,h3,p button {
     animation: shimmer 2s infinite;
     background-size: 200% auto;
   }
+
+    .hotel-amenities {
+      grid-template-columns: 1fr;
+    }
+
+    .categories-container {
+      grid-template-columns: 1fr;
+    }
+
+    .hotel-highlights {
+      flex-direction: column;
+    }
+  
+    .highlight {
+      margin: 1rem 0;
+    }
+}
+
+.deal-banner, .hotel-highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: transparent;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #ff5a5f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #f53d47;
+}
+
+.btn-secondary {
+  background-color: #00A699;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #008c7a;
+}
+
+.hotel-highlights {
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.highlight {
+  flex: 1;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.highlight h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.highlight p {
+  color: #666;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.category {
+  background: var(--background-dark-blue);
+  border: 3px solid var(--gold-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.category h2 {
+  color: var(--gold-color);
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.category ul {
+  list-style-type: none;
+}
+
+.category ul li {
+  padding: 8px 0;
+  font-size: 1.2em;
+  border-bottom: 1px solid var(--light-blue);
+  margin-bottom: 8px;
 }
