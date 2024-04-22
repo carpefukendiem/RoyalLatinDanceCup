@@ -402,7 +402,7 @@ img.categories-img {
   }
 
   #judge-grid {
-    margin-top: 100px;
+    margin: 100px 0 50px 0;
 }
 
 
@@ -427,7 +427,9 @@ img.categories-img {
     grid-template-columns: 1fr; /* Single column layout for small phones */
   }
 }
-
+.judges-section {
+  padding-bottom: 150px;
+}
 
 /* Judges Grid Area */
 .judges {
@@ -1214,11 +1216,25 @@ main.tickets {
   border-radius: 5px;
   display: flex;
   align-items: center;
+  color:
+}
+.contact-item p {
+  margin-left: 10px;  /* Add space between the icon and text if needed */
+  line-height: 2rem;
+  color: black;  /* Adjust line height to match the icon size */
 }
 
 .icon {
   width: 40px;
   margin-right: 10px;
+}
+
+.icon, .fa { 
+  color: var(--background-dark-blue);  /* Apply the color to your icons */
+  font-size: 2rem;  /* Assuming you still want larger icons */
+  vertical-align: middle;  /* Helps keep icons aligned with adjacent text */
+  font-size: 2rem;  /* Larger size, adjust as needed */
+  vertical-align: middle; /* Helps keep icons aligned with text */
 }
 
 .salsa-image img {
