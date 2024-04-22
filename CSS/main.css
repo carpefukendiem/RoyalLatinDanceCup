@@ -6,6 +6,7 @@
   --background-light-blue: #013a63;
   --gold-color: #d4af37;
   --light-blue: #2a9d8f;
+  --royal-blue: #0000DE;
   --border-radius: 10px;
   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -35,6 +36,14 @@ body {
       font-size: 24px;
       margin-bottom: 15px;
     }
+
+    h2.bachata {
+      padding-top: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 1.25em;
+      font-weight: 100;
+      font-size: 5em;
+      font-family: var(--primary-font: 'Exo 2', sans-serif);   }
 
     h1,h2 {
       color: gold;
@@ -88,7 +97,7 @@ nav ul li a {
 }
 
 .header-scrolled nav ul li a {
-  color: #fff;
+  color: gold;
 }
 
 .header-logo {
@@ -227,6 +236,11 @@ nav ul li a {
   padding-top: 220px;
 }
 
+.main.competition {
+  padding-top: 15em;
+}
+
+
 /* Styles that apply globally */
 .hamburger-menu {
   display: none; /* Hides the hamburger menu by default */
@@ -282,8 +296,9 @@ nav ul li a {
 .hero-header {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%; /* Full width of the viewport */
-  max-width: 960px; /* Maximum width to constrain the hero section */
+  
   margin-top: 0; /* Reduce or remove the top margin of the hero section */
   padding-top: 20px 0 0 0; /* Reduce or remove the top padding of the hero section */
   z-index: 1;
@@ -298,14 +313,24 @@ nav ul li a {
 /* Styling specific to the images in the hero section */
 .hero img {
   width: 100%; /* Each image fills the width of the hero container */
-
-
 }
 
-.hero-img {
-  margin-top: 5em;
+img.hero-img.aos-init.aos-animate {
+  padding-top: 6em;
+  max-width: 45%;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
+}
+.comp-img {
+  margin-top: 5em;
+  max-width: 70%;
+  transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
+  animation: moveLogo 2s infinite alternate;
+}
+
+img.comp-img.aos-init.aos-animate {
+  width: 25%;
+  padding-top: 3em;
 }
 
 .small-img {
@@ -319,6 +344,11 @@ nav ul li a {
   padding-top: 5.75em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
+}
+
+img.categories-img {
+  max-width: 44em;
+  padding-top: 3em;
 }
 
 .slogan {
@@ -431,10 +461,6 @@ nav ul li a {
   background-size: 200% auto;
 }
 
-section {
-  padding: 40px 20px; /* Adds padding inside each section */
-  margin-bottom: 40px; /* Adds space below each section */
-}
 
 
 .menu-content a {
@@ -520,6 +546,10 @@ h1,h2,h3,p button {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
+button.whatsapp-button {
+ margin-top: 3em;
+}
+
 .whatsapp-button {
   background-color: #25D366; /* WhatsApp color */
   color: white;
@@ -545,7 +575,7 @@ h1,h2,h3,p button {
 .comp-details {
   text-align: center; /* Aligns the content to the center */
   margin: 0; /* Resets any default margin */
-  padding: 0; /* Resets any default padding */
+  padding-bottom: 10em; /* Resets any default padding */
 }
 
 .comp-details h3 {
@@ -582,7 +612,7 @@ h1,h2,h3,p button {
 .site-footer {
   background-color: rgb(9,25,42); /* Dark background for the footer */
   color: #fff; /* White text color */
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
@@ -680,7 +710,7 @@ h1,h2,h3,p button {
   }
 
   .header-logo {
-    width: 65px;
+    width: 100px;
     margin: 0;
   }
 
@@ -752,6 +782,16 @@ h1,h2,h3,p button {
     .highlight {
       margin: 1rem 0;
     }
+
+    .ticket-sales {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ticket-option {
+      width: 90%; /* Makes each option full width */
+      margin-bottom: 20px;
+  }
 }
 
 .deal-banner, .hotel-highlights {
@@ -827,6 +867,10 @@ h1,h2,h3,p button {
   color: #666;
 }
 
+main.compeition {
+  padding-top: 15em;
+}
+
 .categories-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -836,6 +880,7 @@ h1,h2,h3,p button {
   margin: 20px auto;
   padding: 0 15px;
   box-sizing: border-box;
+  color: white;
 }
 
 .category {
@@ -858,6 +903,163 @@ h1,h2,h3,p button {
 }
 
 .category ul li {
+  padding: 8px 0;
+  font-size: 1.2em;
+  border-bottom: 1px solid var(--light-blue);
+  margin-bottom: 8px;
+}
+
+
+/* Ticket Sales Page */
+
+.ticket {
+ padding-top: 12em;
+}
+
+.ticket-sales {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--background-dark-blue);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.ticket-sales {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--background-dark-blue);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 0 auto; /* Centers the container on the page */
+  max-width: 1200px; /* Sets a maximum width for the container */
+}
+
+.ticket-option {
+  flex: 1;
+  background: var(--background-light-blue);
+  border: 2px solid var(--gold-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px; /* Ensures that columns do not become too narrow */
+}
+
+.ticket-option h2 {
+  color: var(--gold-color);
+}
+
+.ticket-option ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.ticket-option li {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.price {
+  font-size: 1.5em;
+  color: var(--gold-color);
+  margin: 20px 0;
+}
+
+.btn-primary {
+  background-color: #4caf50; /* Match the green color from the header button */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Adjust padding to match the header button size if needed */
+  font-size: 16px; /* Ensure font size is consistent */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 2px; /* Assuming the header button has rounded corners */
+  font-weight: bold; /* Typically header buttons have bold text for better visibility */
+  text-transform: uppercase; /* Common in button designs for emphasis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: Adds depth with a subtle shadow */
+}
+
+.btn-primary:hover {
+  background-color: #45a049; /* Slightly darker green on hover for a dynamic effect */
+  color: gold; /* Change text color on hover if needed */
+}
+
+main.tickets {
+  padding-top: 4em; /* Adjust this value based on your header's actual height */
+  min-height: calc(100vh - 4em); /* Subtract the height of the header */
+  width: 100%; /* Ensure main takes full width */
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
+}
+
+.competition-header {
+  text-align: center;
+  padding: 1em 0; /* Adjust the padding as needed */
+  margin-bottom: 3em;
+}
+
+.competition-title {
+  /* Style for the main title */
+  background-color: var(--royal-blue); /* Gold background */
+  color: white; /* White text */
+  font-size: 3em; /* Large font size */
+  display: inline; /* Only as wide as its content */
+  padding: 0.2em 0.5em; /* Top/bottom and left/right padding */
+  margin: 0; /* Reset default margins */
+  text-transform: uppercase; /* Uppercase text for stylistic preference */
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6); /* Text shadow for depth */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Shadow around the text background */
+  border-radius: 5px; /* Slightly rounded corners for the background */
+}
+
+
+.competition-subtitle {
+  /* Style for the subtitles */
+  background-color: var(--background-dark-blue); /* Assuming this is the color */
+  color: var(--gold-color); /* Assuming this is the color */
+  font-size: 1.5em; /* Adjust the font size as needed */
+  display: inline-block; /* Allows for background color padding around the text */
+  padding: 0.2em 1em; /* Adjust the padding as needed */
+  margin: 0.5em 0; /* Adjust the margin as needed */
+}
+
+/* Grid layout for categories, using unique class names */
+.dance-categories-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for solo and couples */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  color: var(--gold-color); /* Assuming the text color should be gold */
+}
+
+.dance-category {
+  border: 3px solid var(--gold-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  font-size: 1.25em;
+  text-align: center; /* Center the text inside the category box */
+}
+
+/* Styling for list items */
+.dance-category ul {
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+}
+
+.dance-category li {
   padding: 8px 0;
   font-size: 1.2em;
   border-bottom: 1px solid var(--light-blue);

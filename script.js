@@ -34,6 +34,14 @@ window.addEventListener('scroll', function() {
         document.getElementById("footer-placeholder").innerHTML = data;
       })
       .catch(err => console.error('Error loading the footer:', err));
+
+        fetch("/judge-grid.html") // Adjust the path if necessary
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("judge-grid").innerHTML = data;
+          })
+          .catch(err => console.error('Error loading the header:', err));
   });
+  
   
   AOS.init();
