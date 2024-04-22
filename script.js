@@ -43,5 +43,30 @@ window.addEventListener('scroll', function() {
           .catch(err => console.error('Error loading the header:', err));
   });
   
-  
+  function updateCountdown() {
+    // Get today's date
+    const now = new Date();
+    
+    // Set the countdown date to two weeks from today
+    const countdownDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 14).getTime();
+
+    // Calculate the distance between now and the countdown date
+    const distance = countdownDate - now.getTime();
+
+    // Time calculations for days, hours, minutes, and seconds
+    document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24)) + " Days";
+    document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + " Hours";
+    document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + " Minutes";
+    document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000) + " Seconds";
+
+    // If the countdown is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById('countdown').innerHTML = "Rules are now live!";
+    }
+}
+
+// Update the countdown every second
+const x = setInterval(updateCountdown, 1000);
+
   AOS.init();
