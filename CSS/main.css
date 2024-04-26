@@ -43,7 +43,14 @@ body {
       letter-spacing: 1.25em;
       font-weight: 100;
       font-size: 5em;
-      font-family: var(--primary-font: 'Exo 2', sans-serif);   }
+      font-family: var(--primary-font: 'Exo 2', sans-serif);   
+    }
+    
+    h2.info {
+      color: white;
+      margin-top: 5em;
+    }
+
 
     h1,h2 {
       color: gold;
@@ -52,7 +59,7 @@ body {
 
     p,
     li {
-      font-size: 18px;
+      font-size: 22px;
     }
 
     a {
@@ -318,8 +325,9 @@ nav ul li a {
 }
 
 img.hero-img.aos-init.aos-animate {
-  padding-top: 6em;
+  padding-top: 0em;
   max-width: 45%;
+  margin-top: -5em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
 }
@@ -349,8 +357,8 @@ img.comp-img.aos-init.aos-animate {
 }
 
 img.categories-img {
-  max-width: 44em;
-  padding-top: 3em;
+  max-width: 45%;
+  padding-top: 2em;
 }
 
 .slogan {
@@ -414,6 +422,14 @@ img.categories-img {
 }
 
 @media (max-width: 480px) {
+
+  .competition-details-section .competition-grid-container {
+    grid-template-columns: 1fr 1fr; /* Adjust to two columns on very small screens */
+  }
+
+  .competition-details-section h2 {
+    font-size: 1.8rem; /* Smaller header size for small screens */
+  }
   
   .header-logo {
     width: 60px;
@@ -425,6 +441,7 @@ img.categories-img {
 
   .judges {
     grid-template-columns: 1fr; /* Single column layout for small phones */
+   
   }
 }
 .judges-section {
@@ -436,6 +453,8 @@ img.categories-img {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
   gap: 25px; /* Sets the gap between grid items */
+  padding-bottom: 5em;
+  padding-top: 2em;
 }
 
 .judges img {
@@ -491,6 +510,7 @@ menu-content a:hover{
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  padding-bottom: 10em;
 }
 
 .left-details {
@@ -586,7 +606,7 @@ button.whatsapp-button {
 .comp-details {
   text-align: center; /* Aligns the content to the center */
   margin: 0; /* Resets any default margin */
-  padding-bottom: 10em; /* Resets any default padding */
+  padding-bottom: 1em; /* Resets any default padding */
 }
 
 .comp-details h3 {
@@ -623,16 +643,17 @@ button.whatsapp-button {
 .site-footer {
   background-color: rgb(9,25,42); /* Dark background for the footer */
   color: #fff; /* White text color */
-  padding: 20px 0 0 0;
+  padding: 20px 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -643,14 +664,14 @@ button.whatsapp-button {
   padding: 10px 0;
 }
 
-.footer-nav ul {
+/* .footer-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 
 .footer-item {
   margin: 0 10px;
@@ -675,6 +696,14 @@ button.whatsapp-button {
 }
 
 @media (max-width: 768px) {
+  ..competition-details-section .competition-grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Adjust to three columns on smaller screens */
+  }
+
+  .competition-details-section .competition-grid-item {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+
   .contact-container {
     min-height: 50vh; /* Less height on smaller screens */
     padding: 10px;
@@ -814,6 +843,11 @@ button.whatsapp-button {
       width: 90%; /* Makes each option full width */
       margin-bottom: 20px;
   }
+  
+  .details-section {
+    padding-bottom: 2em;
+  }
+
 }
 
 .deal-banner, .hotel-highlights {
@@ -1105,16 +1139,20 @@ main.tickets {
 }
 
 .coming-soon-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('/images/salsa-bg.webp') center center no-repeat; /* Update with your image URL */
-  background-size: cover;
-  opacity: 0.27;
-}
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/RLDC_1024x1024.png'); /* Adjust the path as necessary */
+   background-size: 55% auto; /* Cover the entire section */
+   background-position: center top; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    opacity: 0.15; /* Set the opacity of the background image */
+    z-index: -1; /* Ensure the background is behind the content */
+  }
+  
 
 
 .coming-soon-container h1, .coming-soon-container p {
@@ -1161,9 +1199,9 @@ main.tickets {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/contact-bg.webp'); /* Adjust the path as necessary */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the background image */
+  background-image: url('/images/RLDC_1024x1024.png'); /* Adjust the path as necessary */
+  background-size: 55% auto; /* Cover the entire section */
+  background-position: center top; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
   opacity: 0.15; /* Set the opacity of the background image */
   z-index: -1; /* Ensure the background is behind the content */
@@ -1243,3 +1281,84 @@ main.tickets {
   border-radius: 5px;
   margin-top: 20px;
 }
+
+
+header#header-placeholder {
+  height: 50px; /* Adjust according to actual header height */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Example background color */
+  z-index: 10;
+}
+
+footer#footer-placeholder {
+  height:125px; /* Adjust according to actual footer height */
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: transparent; /* Example background color */
+  z-index: 10;
+}
+
+.full-body-image {
+  display: block;
+  width: 50%; /* Now the image takes up 80% of the screen width */
+  height: auto; /* Height adjusts automatically */
+  position: absolute;
+  top: 224px; /* Start below the header */
+  left: 50%;
+  transform: translateX(-50%); /* Adjust centering */
+  padding-bottom: 10em;
+  z-index: 1;
+}
+
+/* Competition Details Section Styles */
+.competition-details-section h2 {
+    color: gold;
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: shimmer 2s infinite;
+    background-size: 200% auto;
+  }
+
+/* Specific Grid container for competition details */
+.competition-details-section .competition-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five columns of equal size */
+  gap: 20px; /* Space between the grid items */
+  margin: 0 auto;
+  max-width: 1200px; /* Max width to align with site's content width */
+  padding: 20px;
+}
+
+/* Specific Grid item styles for competition details */
+.competition-details-section .competition-grid-item {
+  background-color: var(--background-dark-blue); /* Theme color for background */
+  color: white; /* Text color for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase; /* Styling preference for grid items */
+  padding: 20px; /* Padding for content within grid items */
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem; /* Font size for grid item text */
+  border: 2px solid var(--gold-color); /* Border to match the theme */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.competition-details-section .competition-grid-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+

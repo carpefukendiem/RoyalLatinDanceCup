@@ -66,6 +66,14 @@ window.addEventListener('scroll', function() {
     }
 }
 
+// Click Whatapp button and call Marco
+function openWhatsAppChat() {
+  window.location.href = 'https://wa.me/18057057939'; // Redirects user to WhatsApp chat link
+}
+
+
+
+
 // Update the countdown every second
 const x = setInterval(updateCountdown, 1000);
 
