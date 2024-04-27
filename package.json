@@ -5,11 +5,14 @@
   "main": "script.js",
   "scripts": {
     "minify-css": "cleancss -o CSS/styles.min.css CSS/main.css CSS/normalize.css"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "clean-css-cli": "^5.6.3"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.10"
   }
 }
