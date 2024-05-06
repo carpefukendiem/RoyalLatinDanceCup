@@ -413,7 +413,9 @@ img.categories-img {
     margin: 100px 0 50px 0;
 }
 
-
+img.hotel-logo{
+  padding-bottom: 4em;
+}
  
 .comp-details h3 {
       font-size: 1.8rem; /* Smaller font size on mobile */
@@ -422,28 +424,179 @@ img.categories-img {
 }
 
 @media (max-width: 480px) {
-
-  .competition-details-section .competition-grid-container {
-    grid-template-columns: 1fr 1fr; /* Adjust to two columns on very small screens */
-  }
-
-  .competition-details-section h2 {
-    font-size: 1.8rem; /* Smaller header size for small screens */
+  body {
+    padding: 5px; /* Slightly increase padding */
   }
   
-  .header-logo {
-    width: 60px;
+  .details-section {
+    padding: 10px; /* Add padding to prevent content from touching the edges */
+    display: flex; /* Implement Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align the content for better aesthetics */
+    text-align: center; /* Center text alignment for all text */
+  }
+
+  .details-section .comp-details {
+    width: 100%; /* Full width to use available space */
+    margin-top: 10px; /* Space above for clarity */
+  }
+
+  .details-section h2.info {
+    font-size: 1.5rem; /* Reduce font size to fit small screens */
+    margin-bottom: 15px; /* More space below heading */
+  }
+
+  .details-section p.info {
+    font-size: 0.9rem; /* Smaller font size for paragraph text */
+    margin-bottom: 10px; /* Space between paragraphs */
+  }
+
+  .details-section p {
+    font-size: 0.9rem; /* Consistent font size with other paragraphs */
+  }
+
+  .details-section .whatsapp-button {
+    font-size: 0.85rem; /* Smaller button text */
+    padding: 10px 20px; /* Adjust button padding */
+    margin-top: 15px; /* Space above the button */
+  }
+
+  .img.header-logo.aos-init.aos.animate {
+    max-width: 118px;
+    margin-left: initial;
+  }
+  
+  img.categories-img {
+    max-width: 100%;
+  }
+
+  .hero-header {
+    img.categories-img {
+        max-width: 100%;
+        padding-top: 1em;
+    }
+  }
+  
+  img.hotel-logo {
+    max-width: 450px;
+    padding-bottom: 2em;
+  }
+  .footer-logo {
+   max-width: 300px;
+  }
+
+  .hero-header img.categories-img {
+    max-width: 100%; /* Ensure full width to use available space */
+    padding-top: 0.5em;
+  }
+
+  img.hotel-logo {
+    max-width: 80%; /* Adjust max width for smaller screen */
+    padding-bottom: 1em; /* Reduce padding for tighter layout */
+  }
+
+  .footer-logo {
+    max-width: 50%; /* Reduce the size of footer logo */
+  }
+
+  .footer-bottom p {
+    font-size: 12px; /* Adjust font size for readability */
+    padding-top: 0.5em;
+  }
+
+  .menu-content a:hover {
+    color: var(--royal-blue); /* Maintain hover color */
+  }
+
+  h2.comp-details {
+    font-size: 1.5rem; /* Adjust heading size for better readability */
+  }
+
+  .competition-details-section .competition-grid-container {
+    grid-template-columns: 1fr; /* Single column for narrow screens */
+  }
+
+  .competition-details-section .competition-grid-item {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .contact-container {
+    min-height: 40vh; /* Reduce minimum height */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .comp-details p {
+    font-size: 0.85em; /* Reduce font size */
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem; /* Smaller title font size */
+  }
+
+  .contact-container p {
+    font-size: 0.85rem; /* Smaller text size */
+  }
+
+  .slogan {
+    font-size: 2em; /* Smaller slogan for better fit */
+    padding-top: 0.5em;
+  }
+
+  .dates {
+    font-size: 2em; /* Smaller font size for dates */
+    padding-top: 0.5em;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-item {
+    margin: 3px 0; /* Reduce spacing between footer items */
+  }
+
+  .hamburger-menu {
+    display: block; /* Ensure hamburger menu is visible */
   }
 
   nav.navbar {
-    display: none;
+    display: none; /* Hide the regular navbar in favor of a hamburger menu */
   }
 
   .judges {
-    grid-template-columns: 1fr; /* Single column layout for small phones */
-   
+    grid-template-columns: 1fr; /* Single column for judges */
+  }
+
+  .judges-title { 
+    font-size: 2.5rem; /* Reduce size for smaller screens */
+  }
+
+  .comp-details h3 {
+    font-size: 1.5rem; /* Adjust competition details heading size */
+  }
+
+  .hotel-amenities,
+  .categories-container,
+  .hotel-highlights {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .highlight,
+  .ticket-option {
+    width: 100%; /* Use full width for these elements */
+  }
+  
+  .details-section {
+    padding: 10px; /* Adjust padding for better spacing */
   }
 }
+
 .judges-section {
   padding-bottom: 150px;
 }
@@ -510,7 +663,7 @@ menu-content a:hover{
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  padding-bottom: 10em;
+  padding-bottom: 2em;
 }
 
 .left-details {
@@ -532,6 +685,14 @@ h1,h2,h3,p button {
 
 .contact-info h3 {
   margin-top: 20px;
+}
+
+p.info a {
+  color: white;
+}
+
+p.info a:hover {
+  color: gold;
 }
 
 .whatsapp-button {
@@ -696,7 +857,39 @@ button.whatsapp-button {
 }
 
 @media (max-width: 768px) {
-  ..competition-details-section .competition-grid-container {
+  .img.header-logo.aos-init.aos.animate {
+    max-width: 118px;
+    margin-left: initial;
+  }
+
+  .hero-header {
+    img.categories-img {
+        max-width: 80%;
+        padding-top: 1em;
+    }
+  }
+  
+  img.hotel-logo {
+    max-width: 450px;
+    padding-bottom: 2em;
+}
+  .footer-logo {
+   max-width: 300px;
+  }
+  
+  .footer-bottom p {
+    font-size: .75em;
+    padding-top: 1em;
+    
+  }
+  .menu-content a:hover {
+   color: var(--royal-blue);
+  }
+
+  h2.comp-details {
+    font-size: 2.15rem;
+}
+  .competition-details-section .competition-grid-container {
     grid-template-columns: repeat(3, 1fr); /* Adjust to three columns on smaller screens */
   }
 
@@ -707,6 +900,10 @@ button.whatsapp-button {
   .contact-container {
     min-height: 50vh; /* Less height on smaller screens */
     padding: 10px;
+}
+
+.comp-details p {
+  font-size: 1em;
 }
 
 .contact-container h1 {
@@ -1231,7 +1428,7 @@ main.tickets {
 }
 
 .contact-container a:hover {
-  background: #cccccc; /* Light grey background on hover */
+  background: white;; /* Light grey background on hover */
   color: #222222; /* Slightly darker text on hover */
 }
 
@@ -1242,38 +1439,47 @@ main.tickets {
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  text-align: left;
+  background: var(--background-dark-blue); /* Same dark blue background */
+  padding: 30px; /* More padding for better visibility */
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-around; /* Space out contact items */
+  align-items: center; /* Center items vertically */
+  max-width: 80%; /* Adjust width as needed */
+  margin: 40px auto; /* Center it on page with more margin */
+  border: 2px solid var(--gold-color); /* Gold border matching the nav items */
 }
 
 .contact-item {
-  background: #f8f8f8;
-  padding: 10px;
-  border-radius: 5px;
   display: flex;
   align-items: center;
-  color:
+  color: white;
+  font-size: 1.2em; /* Increase font size for better readability */
+  padding: 10px 20px; /* More padding for larger touch area */
 }
-.contact-item p {
-  margin-left: 10px;  /* Add space between the icon and text if needed */
-  line-height: 2rem;
-  color: black;  /* Adjust line height to match the icon size */
+
+.contact-item:not(:last-child) {
+  border-right: 2px solid var(--gold-color); /* Separators between items */
 }
 
 .icon {
-  width: 40px;
-  margin-right: 10px;
+  color: var(--gold-color);
+  margin-right: 15px; /* More space between icon and text */
+  font-size: 2em; /* Larger icon size */
 }
 
-.icon, .fa { 
-  color: var(--background-dark-blue);  /* Apply the color to your icons */
-  font-size: 2rem;  /* Assuming you still want larger icons */
-  vertical-align: middle;  /* Helps keep icons aligned with adjacent text */
-  font-size: 2rem;  /* Larger size, adjust as needed */
-  vertical-align: middle; /* Helps keep icons aligned with text */
+.contact-item a {
+  color: var(--light-blue); /* Light blue for links for better contrast */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold text for links */
 }
+
+.contact-item a:hover {
+  color: goldenrod; /* Gold color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
 
 .salsa-image img {
   width: 100%;

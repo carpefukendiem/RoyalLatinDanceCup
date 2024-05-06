@@ -21,7 +21,12 @@
     <!-- Hero Section Above The Fold - Use Flexbox -->
     <section class="hero-header">
       <div class="hero">
-        <img src="images/RLDC_1024x1024.png" data-aos="fade-up" data-aos-delay="30" class="hero-img" alt="Royal Latin Dance Cup - Salsa Dance Event">
+        <picture>
+          <source media="(max-width: 480px)" srcset="images/RLDC_320x320.png">
+          <source media="(min-width: 481px)" srcset="images/RLDC_1024x1024.png">
+          <img src="images/RLDC_1024x1024.png" alt="Royal Latin Dance Cup - Salsa Dance Event" data-aos="fade-up" data-aos-delay="30" class="hero-img">
+        </picture>
+        
         <img src="/images/comp-categories.webp" class="categories-img" alt="Royal Latin Dance Cup - Salsa Dance Event"> 
       </div>
     </section>
@@ -33,7 +38,7 @@
         <a href="/competition-details/rules.html" class="competition-grid-item">Rules</a>
         <a href="#" class="competition-grid-item">Registration</a>
         <a href="/competition-details/rules.html" class="competition-grid-item">Categories</a>
-        <a href="/hotel-and-travel.html" class="competition-grid-item">Hotel</a>
+        <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1714071562713&key=GRP&app=resvlink" target="_blank" class="competition-grid-item">Hotel</a>
       </div>
     </section>
     
@@ -41,28 +46,30 @@
     <section class="details-section">
       <div class="comp-details">
         <h2 class="info">Need more information? Contact Us</h2>
-        <h3>COMPETITION AND PASSES</h3>
-        <p>Marco Aguilar +18057057939</p>
+       
+        <p class="info">Competition Director - Marco Aguilar <a href="tel:+18057057939">+1 (805) 705-7939</a></p>
+        <p class="info">Stage and Production Director - Emerson Zaldana <a href="tel:+13238776713">+1 (323) 877-6713</a></p>
         <p>royallatindancecup@gmail.com</p>
-        <h3>HOTEL</h3>
-        <p>Marco Aguilar +18057057939</p>
+       
+        <!-- <p>Marco Aguilar +18057057939</p> -->
         <button onclick="openWhatsAppChat()" class="whatsapp-button">
             Chat on WhatsApp
         </button>
       </div>
     </div>
     </section>
+    
+    <!-- Marriot Address Image -->
+    <div>
+    <img class="hotel-logo" src="images/mariott logo.webp" alt="Mariott Burbank Hotel">
+    </div>
 
-<!-- Map Section -->
-<section class="map-section">
-  <h2 class="map-overlay">Competition Location</h2> <!-- Overlay Text -->
-  <iframe class="fullwidth-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.1307103898866!2d-118.35060832319049!3d34.19413657310397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c295a7ed450e75%3A0x302f0d247b07c402!2sLos%20Angeles%20Marriott%20Burbank%20Airport!5e0!3m2!1sen!2sus!4v1713242634721!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
-
-
-    <section class="map">
-      <!-- map code snippet goes here -->
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2 class="map-overlay">Competition Location</h2> <!-- Overlay Text -->
+      <iframe class="fullwidth-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.1307103898866!2d-118.35060832319049!3d34.19413657310397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c295a7ed450e75%3A0x302f0d247b07c402!2sLos%20Angeles%20Marriott%20Burbank%20Airport!5e0!3m2!1sen!2sus!4v1713242634721!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+
   </main>
   <div id="footer-placeholder"></div>
   <script src="script.js"></script>
