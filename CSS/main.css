@@ -325,9 +325,8 @@ nav ul li a {
 }
 
 img.hero-img.aos-init.aos-animate {
-  padding-top: 0em;
-  max-width: 45%;
-  margin-top: -5em;
+  max-width: 35rem;
+  margin-top: -3em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
 }
@@ -488,11 +487,6 @@ img.hotel-logo{
   .hero-header img.categories-img {
     max-width: 100%; /* Ensure full width to use available space */
     padding-top: 0.5em;
-  }
-
-  img.hotel-logo {
-    max-width: 80%; /* Adjust max width for smaller screen */
-    padding-bottom: 1em; /* Reduce padding for tighter layout */
   }
 
   .footer-logo {
