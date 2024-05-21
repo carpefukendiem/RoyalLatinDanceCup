@@ -1562,3 +1562,61 @@ footer#footer-placeholder {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .details-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-section .comp-details {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .details-section h2.info {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .details-section p.info {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .details-section p {
+    font-size: 0.9rem;
+  }
+
+  .details-section .whatsapp-button {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    margin-top: 15px;
+  }
+
+  .competition-details-section .competition-grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .competition-details-section .competition-grid-item {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .competition-details-section .competition-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .competition-details-section .competition-grid-item {
+    font-size: 1rem;
+  }
+}
