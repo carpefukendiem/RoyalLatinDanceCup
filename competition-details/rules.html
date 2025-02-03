@@ -12,27 +12,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .competition-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
+        .competition-image {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .competition-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .competition-section {
+                margin: 1rem auto;
+            }
+
+            .competition-image {
+                margin: 1rem 0;
+            }
+        }
+
+        /* Remove the coming soon container styles since we're replacing it */
+        .coming-soon-container {
+            display: none;
+        }
+    </style>
 </head>
 <body>
   <div id="header-placeholder"></div>
  
   <main class="main">
-
-    <div class="coming-soon-container">
-        <h1>Rules Coming Soon</h1>
-        <p>Stay tuned for the rules of the event, we're working to get them up as soon as possible.</p>
-        <div id="countdown">
-            <div id="days" class="time"></div>
-            <div id="hours" class="time"></div>
-            <div id="minutes" class="time"></div>
-            <div id="seconds" class="time"></div>
-        </div>
+    <div class="competition-section">
+        <!-- First image: Competition Criteria -->
+        <img src="../images/Competition Criteria.jpg" 
+             alt="Competition Criteria - Scoring breakdown including Timing, Musicality, Technique, and other factors" 
+             class="competition-image"
+             data-aos="fade-up">
+        
+        <!-- Second image: Competition Rules -->
+        <img src="../images/Competition Rules.jpg" 
+             alt="Competition Rules - Categories including Student, Amateur, Professional, and Pro-Am divisions" 
+             class="competition-image"
+             data-aos="fade-up">
+        
+        <!-- Third image: Competition Definitions -->
+        <img src="../images/Competition Definitions.jpg" 
+             alt="Competition Definitions - Detailed rules for couples, tricks, timing, and team categories" 
+             class="competition-image"
+             data-aos="fade-up">
     </div>
-      
-
-<!-- Map Section -->
-
   </main>
   <div id="footer-placeholder"></div>
 
