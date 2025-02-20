@@ -4,13 +4,15 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "minify-css": "cleancss -o CSS/styles.min.css CSS/main.css CSS/normalize.css"
+    "minify-css": "cleancss -o CSS/styles.min.css CSS/main.css CSS/normalize.css",
+    "dev": "live-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "clean-css-cli": "^5.6.3"
+    "clean-css-cli": "^5.6.3",
+    "live-server": "^1.2.0"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.10"
