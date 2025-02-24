@@ -1620,3 +1620,42 @@ footer#footer-placeholder {
     font-size: 1rem;
   }
 }
+
+.mobile-header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-cta-button {
+  display: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mobile-cta-button:hover {
+  background-color: #45a049;
+  color: gold;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-button {
+    display: inline-block;
+  }
+  
+  .hamburger-menu {
+    display: block; /* Keep existing display property */
+  }
+  
+  .mobile-header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px; /* Match existing hamburger menu padding */
+  }
+}
