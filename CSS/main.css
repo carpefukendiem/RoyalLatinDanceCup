@@ -43,7 +43,7 @@ body {
       letter-spacing: 1.25em;
       font-weight: 100;
       font-size: 5em;
-      font-family: var(--primary-font: 'Exo 2', sans-serif);   
+      font-family: 'Exo 2', sans-serif;   
     }
     
     h2.info {
@@ -63,7 +63,7 @@ body {
     }
 
     a {
-      text-decorationL: none;
+      text-decoration: none;
     }
 }
 
@@ -619,6 +619,39 @@ img.hotel-logo{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
 }
 
+/* Judge Card Styles */
+.judge-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.judge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.judge-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.judge-name {
+  color: gold;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Exo 2', sans-serif;
+}
+
 .judges-title { 
   text-align: center; /* Center-align the title */
   color: gold; /* Gold color to match the theme */
@@ -726,7 +759,7 @@ p.info a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(=50%, -50%);
+  transform: translate(-50%, -50%);
   color: gold;
   font-size: 44px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
