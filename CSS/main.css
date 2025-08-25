@@ -325,7 +325,7 @@ nav ul li a {
 }
 
 img.hero-img.aos-init.aos-animate {
-  max-width: 35rem;
+  max-width: 28.35rem;
   margin-top: -3em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
   animation: moveLogo 2s infinite alternate;
@@ -423,6 +423,12 @@ img.hotel-logo{
 }
 
 @media (max-width: 480px) {
+  .event-dates {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+  }
+  
   body {
     padding: 5px; /* Slightly increase padding */
   }
@@ -503,7 +509,13 @@ img.hotel-logo{
   }
 
   h2.comp-details {
-    font-size: 1.5rem; /* Adjust heading size for better readability */
+    font-size: 2rem; /* Adjust heading size for better readability */
+    margin: 1.5rem 0 1rem 0;
+  }
+  
+  h2.comp-details::after {
+    width: 60px;
+    height: 2px;
   }
 
   .competition-details-section .competition-grid-container {
@@ -667,9 +679,6 @@ img.hotel-logo{
   -webkit-text-fill-color: transparent;
   /* Adding a subtle text-shadow for depth */
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  /* Adding an animation to create a shimmer effect */
-  animation: shimmer 2s infinite;
-  background-size: 200% auto;
 }
 
 
@@ -790,6 +799,29 @@ button.whatsapp-button {
 
 
 
+/* Event Dates Section */
+.event-dates-section {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+.event-dates {
+  color: #ffd700; /* Gold color to match the hero image */
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: 'Exo 2', sans-serif;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
 /* competition and passes heading */
 .comp-details {
   text-align: center; /* Aligns the content to the center */
@@ -813,10 +845,6 @@ button.whatsapp-button {
   
   /* Adding a subtle text-shadow for depth */
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  
-  /* Adding an animation to create a shimmer effect */
-  animation: shimmer 2s infinite;
-  background-size: 200% auto;
 }
 
 
@@ -914,8 +942,29 @@ button.whatsapp-button {
   }
 
   h2.comp-details {
-    font-size: 2.15rem;
-}
+    font-size: 2.8rem;
+    color: #ffd700;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    margin: 2rem 0 1.5rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 1rem 0;
+  }
+  
+  h2.comp-details::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    border-radius: 2px;
+  }
   .competition-details-section .competition-grid-container {
     grid-template-columns: repeat(3, 1fr); /* Adjust to three columns on smaller screens */
   }
@@ -1557,11 +1606,10 @@ footer#footer-placeholder {
     font-weight: 700;
     margin: 1rem 0;
     padding: 1rem 0;
-    background: -webkit-linear-gradient(45deg, #ffd700, #f8f8ff);
+    background: #ffd700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: shimmer 2s infinite;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
     background-size: 200% auto;
   }
 
