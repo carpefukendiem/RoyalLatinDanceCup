@@ -1616,7 +1616,7 @@ footer#footer-placeholder {
 /* Specific Grid container for competition details */
 .competition-details-section .competition-grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Five columns of equal size */
+  grid-template-columns: repeat(3, 1fr); /* Three columns for two rows */
   gap: 20px; /* Space between the grid items */
   margin: 0 auto;
   max-width: 1200px; /* Max width to align with site's content width */
