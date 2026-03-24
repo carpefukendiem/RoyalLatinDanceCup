@@ -46,7 +46,8 @@ body {
       font-family: 'Exo 2', sans-serif;   
     }
     
-    h2.info {
+    h2.info,
+    h3.info {
       color: white;
       margin-top: 5em;
     }
@@ -446,7 +447,8 @@ img.hotel-logo{
     margin-top: 10px; /* Space above for clarity */
   }
 
-  .details-section h2.info {
+  .details-section h2.info,
+  .details-section h3.info {
     font-size: 1.5rem; /* Reduce font size to fit small screens */
     margin-bottom: 15px; /* More space below heading */
   }
@@ -1661,7 +1663,8 @@ footer#footer-placeholder {
     margin-top: 10px;
   }
 
-  .details-section h2.info {
+  .details-section h2.info,
+  .details-section h3.info {
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
