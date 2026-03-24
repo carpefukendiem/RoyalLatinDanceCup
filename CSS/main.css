@@ -322,11 +322,10 @@ nav ul li a {
 
 /* Styling specific to the images in the hero section */
 .hero img {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Each image fills the width of the hero container */
 }
 
-.hero-img {
+img.hero-img.aos-init.aos-animate {
   max-width: 28.35rem;
   margin-top: -3em;
   transition: transform 0.3s ease-in; /* Larger image gets more space to be prominent */
@@ -468,7 +467,7 @@ img.hotel-logo{
     margin-top: 15px; /* Space above the button */
   }
 
-  img.header-logo {
+  .img.header-logo.aos-init.aos.animate {
     max-width: 118px;
     margin-left: initial;
   }
@@ -907,7 +906,7 @@ button.whatsapp-button {
 }
 
 @media (max-width: 768px) {
-  img.header-logo {
+  .img.header-logo.aos-init.aos.animate {
     max-width: 118px;
     margin-left: initial;
   }
