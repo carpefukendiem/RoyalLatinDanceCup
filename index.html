@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Latin Dance Cup - It's Your Time To Shine</title>
   <meta name="description" content="Royal Latin Dance Cup is a premier salsa dance event in Burbank, CA. Register for heats and showcase, view rules, judges, and hotel details.">
+  <link rel="preload" as="image" href="images/royal-latin-hero-1200.webp" imagesrcset="images/royal-latin-hero-600.webp 600w, images/royal-latin-hero-1200.webp 1200w" imagesizes="(max-width: 600px) 100vw, 1200px">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -28,9 +29,10 @@
     <section class="hero-header">
       <div class="hero">
         <picture>
+          <source type="image/webp" srcset="images/royal-latin-hero-600.webp 600w, images/royal-latin-hero-1200.webp 1200w" sizes="(max-width: 600px) 100vw, 1200px">
           <source media="(max-width: 480px)" srcset="images/ROYAL LATIN DANCE CUP NEW.png">
           <source media="(min-width: 481px)" srcset="images/ROYAL LATIN DANCE CUP NEW.png">
-          <img src="images/ROYAL LATIN DANCE CUP NEW.png" alt="Royal Latin Dance Cup - Salsa Dance Event" data-aos="fade-up" data-aos-delay="30" class="hero-img" width="2002" height="1405">
+          <img src="images/ROYAL LATIN DANCE CUP NEW.png" alt="Royal Latin Dance Cup - Salsa Dance Event" data-aos="fade-up" data-aos-delay="30" class="hero-img" width="2002" height="1405" decoding="async" fetchpriority="high">
         </picture>
         
         <img src="/images/comp-categories.webp" class="categories-img" alt="Royal Latin Dance Cup - Salsa Dance Event" width="1026" height="126"> 
