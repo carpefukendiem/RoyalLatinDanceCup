@@ -20,47 +20,30 @@ window.addEventListener('scroll', function() {
 
   document.addEventListener("DOMContentLoaded", function() {
     // Function to load the Header
-    const headerPlaceholder = document.getElementById("header-placeholder");
-    if (headerPlaceholder) {
-      fetch("/header.html") // Adjust the path if necessary
-        .then(response => response.text())
-        .then(data => {
-          headerPlaceholder.innerHTML = data;
-        })
-        .catch(err => console.error('Error loading the header:', err));
-    }
+    fetch("/header.html") // Adjust the path if necessary
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error('Error loading the header:', err));
   
     // Function to load the Footer
-    const footerPlaceholder = document.getElementById("footer-placeholder");
-    if (footerPlaceholder) {
-      fetch("/footer.html") // Adjust the path if necessary
-        .then(response => response.text())
-        .then(data => {
-          footerPlaceholder.innerHTML = data;
-        })
-        .catch(err => console.error('Error loading the footer:', err));
-    }
+    fetch("/footer.html") // Adjust the path if necessary
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error('Error loading the footer:', err));
 
-    const judgeGrid = document.getElementById("judge-grid");
-    if (judgeGrid) {
-      fetch("/judge-grid.html") // Adjust the path if necessary
-        .then(response => response.text())
-        .then(data => {
-          judgeGrid.innerHTML = data;
-        })
-        .catch(err => console.error('Error loading the judge grid:', err));
-    }
+        fetch("/judge-grid.html") // Adjust the path if necessary
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("judge-grid").innerHTML = data;
+          })
+          .catch(err => console.error('Error loading the header:', err));
   });
   
   function updateCountdown() {
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
-    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-      return;
-    }
-
     // Get today's date
     const now = new Date();
     
@@ -71,18 +54,15 @@ window.addEventListener('scroll', function() {
     const distance = countdownDate - now.getTime();
 
     // Time calculations for days, hours, minutes, and seconds
-    daysEl.innerText = Math.floor(distance / (1000 * 60 * 60 * 24)) + " Days";
-    hoursEl.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + " Hours";
-    minutesEl.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + " Minutes";
-    secondsEl.innerText = Math.floor((distance % (1000 * 60)) / 1000) + " Seconds";
+    document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24)) + " Days";
+    document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + " Hours";
+    document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + " Minutes";
+    document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000) + " Seconds";
 
     // If the countdown is over, write some text
     if (distance < 0) {
         clearInterval(x);
-        const countdownEl = document.getElementById('countdown');
-        if (countdownEl) {
-          countdownEl.innerHTML = "Rules are now live!";
-        }
+        document.getElementById('countdown').innerHTML = "Rules are now live!";
     }
 }
 
@@ -96,3 +76,5 @@ function openWhatsAppChat() {
 
 // Update the countdown every second
 const x = setInterval(updateCountdown, 1000);
+
+  AOS.init();

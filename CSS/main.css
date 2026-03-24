@@ -311,7 +311,6 @@ nav ul li a {
   margin-top: 0; /* Reduce or remove the top margin of the hero section */
   padding-top: 20px 0 0 0; /* Reduce or remove the top padding of the hero section */
   z-index: 1;
-}
 
 .hero {
   display: flex;
@@ -379,7 +378,7 @@ img.categories-img {
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
+
   section {
     padding: 20px 10px; /* Smaller padding for mobile */
     margin-bottom: 20px; /* Smaller margin for mobile */
@@ -417,9 +416,9 @@ img.hotel-logo{
   padding: 0 1.5em 4em 1.5em;
 }
  
-  .comp-details h3 {
-    font-size: 1.8rem; /* Smaller font size on mobile */
-    padding: 0.8rem 0;
+.comp-details h3 {
+      font-size: 1.8rem; /* Smaller font size on mobile */
+      padding: 0.8rem 0;
   }
 }
 
@@ -476,6 +475,13 @@ img.hotel-logo{
     max-width: 100%;
   }
 
+  .hero-header {
+    img.categories-img {
+        max-width: 100%;
+        padding-top: 1em;
+    }
+  }
+  
   img.hotel-logo {
     max-width: 450px;
     padding-bottom: 2em;
