@@ -610,7 +610,7 @@ img.hotel-logo{
 /* Judges Grid Area */
 .judges {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
   gap: 25px; /* Sets the gap between grid items */
   padding-bottom: 5em;
   padding-top: 2em;
