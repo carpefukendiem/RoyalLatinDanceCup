@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/tickets"
+  to = "https://tickets.royallatindancecup.com/full-pass"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tickets.html"
+  to = "https://tickets.royallatindancecup.com/full-pass"
+  status = 301
+  force = true
