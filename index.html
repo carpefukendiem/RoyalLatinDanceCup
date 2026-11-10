@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Latin Dance Cup - It's Your Time To Shine</title>
-  <meta name="description" content="Royal Latin Dance Cup is a premier salsa dance event in Burbank, CA. Register for heats and showcase, view rules, judges, and hotel details.">
+  <meta name="description" content="Royal Latin Dance Cup is a premier salsa dance event in Burbank, CA. View competition details, rules, judges, and hotel information.">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Myriad+Pro:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -32,6 +32,19 @@
           <source media="(min-width: 481px)" srcset="images/ROYAL LATIN DANCE CUP NEW.png">
           <img src="images/ROYAL LATIN DANCE CUP NEW.png" alt="Royal Latin Dance Cup - Salsa Dance Event" data-aos="fade-up" data-aos-delay="30" class="hero-img">
         </picture>
+
+        <div class="documentary-teaser" data-aos="fade-up" data-aos-delay="80">
+          <p class="documentary-teaser-label">Royal Latin Dance Cup Documentary</p>
+          <button
+            type="button"
+            class="lite-youtube lite-youtube--teaser"
+            data-videoid="0DrWeq0vJZA"
+            data-title="Royal Latin Dance Cup Documentary"
+            aria-label="Play Royal Latin Dance Cup Documentary"
+            style="background-image: url('https://i.ytimg.com/vi/0DrWeq0vJZA/maxresdefault.jpg');">
+            <span class="lite-youtube-play" aria-hidden="true"></span>
+          </button>
+        </div>
         
         <img src="/images/comp-categories.webp" class="categories-img" alt="Royal Latin Dance Cup - Salsa Dance Event"> 
       </div>
@@ -42,8 +55,10 @@
   <div class="competition-grid-container">
     <a href="/competition-details/judges.html#" class="competition-grid-item">Judges</a>
     <a href="/competition-details/rules.html" class="competition-grid-item">Rules</a>
-    <a href="https://www.eventtabs.com/rldc" target="_blank" class="competition-grid-item">Heats Registration</a>
-    <a href="https://podiumsystem.mx/acceso/royalLatinDanceCup.aspx" target="_blank" class="competition-grid-item">Showcase Registration</a>
+    <!-- TODO: Replace this with the registration URL Marco provides.
+         Temporary value is the current Competition (formerly Showcase) Registration destination.
+         Source of truth: window.COMPETITION_REGISTRATION_URL in script.js -->
+    <a href="https://podiumsystem.mx/acceso/royalLatinDanceCup.aspx" target="_blank" class="competition-grid-item competition-registration-link">Competition Registration</a>
     <a href="/competition-details/competition-categories.html" class="competition-grid-item">Categories</a>
     <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1755552775315&key=GRP&app=resvlink" target="_blank" class="competition-grid-item">Hotel</a>
   </div>
@@ -60,6 +75,34 @@
     <button onclick="openWhatsAppChat()" class="whatsapp-button">
       Chat on WhatsApp
     </button>
+  </div>
+</section>
+
+<section class="videos-section" aria-labelledby="latest-videos-heading">
+  <h2 id="latest-videos-heading" class="comp-details">Latest Videos</h2>
+  <div class="video-embed-wrap">
+    <iframe
+      class="video-embed"
+      title="Uploads from Royal Latin Dance Cup"
+      src="https://www.youtube.com/embed/videoseries?list=UU1oZAKuTMdengJlvWi5wIkQ"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+</section>
+
+<section class="documentary-section" aria-labelledby="documentary-heading">
+  <h2 id="documentary-heading" class="comp-details">Royal Latin Dance Cup Documentary</h2>
+  <div class="video-embed-wrap">
+    <iframe
+      class="video-embed"
+      title="Royal Latin Dance Cup Documentary"
+      src="https://www.youtube.com/embed/0DrWeq0vJZA"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 </section>
 
