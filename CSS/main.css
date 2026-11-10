@@ -18,7 +18,7 @@
 }
 
 body {
-  background-image: url('../images/Artboard 1@2x.webp'); /* Replace with the path to your background image */
+  background-image: url('../images/la-skyline-bg.webp'); /* Replace with the path to your background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ nav ul li a {
 }
 
 .bg-img {
-  background-image: url('images/Artboard@4x.webp'); /* Path to your image file */
+  background-image: url('../images/la-skyline-bg.webp'); /* Path to your image file */
   background-size: cover; /* Ensures the image covers the entire area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
