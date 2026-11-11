@@ -1901,6 +1901,24 @@ footer#footer-placeholder {
   display: none;
 }
 
+.lite-youtube:fullscreen,
+.lite-youtube:-webkit-full-screen {
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+}
+
+.lite-youtube:fullscreen iframe,
+.lite-youtube:-webkit-full-screen iframe {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .documentary-teaser {
     width: min(100%, 220px);

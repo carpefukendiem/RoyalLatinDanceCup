@@ -28,6 +28,20 @@ function initLiteYoutubeTeasers() {
       teaser.classList.add("lite-youtube--static");
     }
 
+    function requestTeaserFullscreen() {
+      const target = teaser;
+      if (target.requestFullscreen) {
+        return target.requestFullscreen();
+      }
+      if (target.webkitRequestFullscreen) {
+        return target.webkitRequestFullscreen();
+      }
+      if (target.msRequestFullscreen) {
+        return target.msRequestFullscreen();
+      }
+      return Promise.resolve();
+    }
+
     function activateTeaser() {
       if (teaser.classList.contains("lite-youtube--activated")) {
         return;
@@ -36,14 +50,20 @@ function initLiteYoutubeTeasers() {
       const iframe = document.createElement("iframe");
       iframe.title = teaser.getAttribute("data-title") || "YouTube video";
       iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+      iframe.setAttribute("allowfullscreen", "");
       iframe.allowFullscreen = true;
       // Click-to-play only: no embed until user gesture; autoplay starts after click.
       iframe.src =
         "https://www.youtube.com/embed/" +
         encodeURIComponent(videoId) +
-        "?autoplay=1&rel=0&modestbranding=1";
+        "?autoplay=1&rel=0&modestbranding=1&fs=1";
       teaser.appendChild(iframe);
+
+      // Expand to fullscreen from the same click gesture (best-effort; limited on some iOS browsers).
+      Promise.resolve(requestTeaserFullscreen()).catch(function () {
+        // Ignore denial / unsupported Fullscreen API; inline player still works.
+      });
     }
 
     teaser.addEventListener("click", activateTeaser);
