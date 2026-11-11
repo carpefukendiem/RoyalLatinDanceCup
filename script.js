@@ -28,7 +28,7 @@ function initLiteYoutubeTeasers() {
       teaser.classList.add("lite-youtube--static");
     }
 
-    teaser.addEventListener("click", function () {
+    function activateTeaser() {
       if (teaser.classList.contains("lite-youtube--activated")) {
         return;
       }
@@ -38,12 +38,15 @@ function initLiteYoutubeTeasers() {
       iframe.allow =
         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
       iframe.allowFullscreen = true;
+      // Click-to-play only: no embed until user gesture; autoplay starts after click.
       iframe.src =
         "https://www.youtube.com/embed/" +
         encodeURIComponent(videoId) +
-        "?autoplay=1&rel=0";
+        "?autoplay=1&rel=0&modestbranding=1";
       teaser.appendChild(iframe);
-    });
+    }
+
+    teaser.addEventListener("click", activateTeaser);
   });
 }
 
