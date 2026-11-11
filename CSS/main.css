@@ -1790,20 +1790,26 @@ footer#footer-placeholder {
   border: 0;
 }
 
-/* Compact above-the-fold documentary teaser */
+/* Compact above-the-fold documentary teaser.
+   Keep visible without AOS — fade-up left this block at opacity:0 above the fold. */
 .documentary-teaser {
-  width: min(100%, 320px);
-  margin: 0.75rem auto 0.5rem;
+  position: relative;
+  z-index: 2;
+  width: min(100%, 280px);
+  margin: 0.35rem auto 0.25rem;
   text-align: center;
+  opacity: 1;
+  transform: none;
 }
 
 .documentary-teaser-label {
   color: gold;
   font-family: 'Exo 2', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.4rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
 }
 
 .lite-youtube {
@@ -1812,28 +1818,47 @@ footer#footer-placeholder {
   width: 100%;
   padding: 0;
   border: 2px solid var(--gold-color);
-  background-color: #000;
+  border-radius: 4px;
+  background-color: #111;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
   cursor: pointer;
   overflow: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+  color: inherit;
+  font: inherit;
 }
 
 .lite-youtube--teaser {
   aspect-ratio: 16 / 9;
-  max-width: 320px;
+  width: 100%;
+  max-width: 280px;
+  min-height: 158px;
   margin: 0 auto;
+}
+
+.lite-youtube--teaser::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.12));
+  pointer-events: none;
 }
 
 .lite-youtube-play {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 54px;
-  height: 38px;
-  margin: -19px 0 0 -27px;
-  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+  width: 58px;
+  height: 40px;
+  margin: -20px 0 0 -29px;
+  background: rgba(200, 0, 0, 0.92);
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .lite-youtube-play::before {
@@ -1848,13 +1873,20 @@ footer#footer-placeholder {
 }
 
 .lite-youtube:hover .lite-youtube-play,
-.lite-youtube:focus .lite-youtube-play {
-  background: #c00;
+.lite-youtube:focus .lite-youtube-play,
+.lite-youtube:focus-visible .lite-youtube-play {
+  background: #e00;
+}
+
+.lite-youtube:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .lite-youtube iframe {
   position: absolute;
   inset: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
   border: 0;
@@ -1864,22 +1896,24 @@ footer#footer-placeholder {
   cursor: default;
 }
 
+.lite-youtube--activated::after,
 .lite-youtube--activated .lite-youtube-play {
   display: none;
 }
 
 @media (max-width: 768px) {
   .documentary-teaser {
-    width: min(100%, 240px);
-    margin-top: 0.5rem;
+    width: min(100%, 220px);
+    margin-top: 0.25rem;
   }
 
   .documentary-teaser-label {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .lite-youtube--teaser {
-    max-width: 240px;
+    max-width: 220px;
+    min-height: 124px;
   }
 
   .videos-section,
